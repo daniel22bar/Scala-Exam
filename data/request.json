@@ -1,0 +1,10 @@
+[
+  {
+    "min_age": "20",
+    "max_age": "40",
+    "gender": "Male",
+    "prefix_name": "Jo",
+    "maritalStatus": "married",
+    "Number of Children": "2"
+  }
+]
