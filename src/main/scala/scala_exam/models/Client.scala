@@ -7,9 +7,8 @@ import scala_exam.enums.{Gender, MaritalStatus}
 
 
 case class Client(firstName:String,	lastName:String,gender:Gender,age:Int,email:String,phone:String,
-                  education:String,	occupation:String,salary:Double,maritalStatus:MaritalStatus,	numberOfChildren:Double)
-                  extends PersonBase {
- val name: String = firstName + " " + lastName
+                  education:String,	occupation:String,salary:Double,maritalStatus:MaritalStatus,	numberOfChildren:Int)
+                  {
 }
 
 object Client{
@@ -26,7 +25,7 @@ object Client{
     val occupation:String= cellIterator.next().getStringCellValue
     val salary:Double= cellIterator.next().getNumericCellValue
     val maritalStatus:MaritalStatus= MaritalStatus.withName(cellIterator.next().getStringCellValue)
-    val numberOfChildren:Double= cellIterator.next().getNumericCellValue
+    val numberOfChildren:Int= cellIterator.next().getNumericCellValue.toInt
     Client(firstName,lastName,gender,age,email,phone,education,occupation,salary,maritalStatus,numberOfChildren)
   }
 

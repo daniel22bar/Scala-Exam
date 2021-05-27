@@ -1,12 +1,16 @@
-package scala_exam.extensions.user_list_extention
+package scala_exam.extensions.user_list_report_extention
 
 import scala_exam.extensions.string_extention.StringRegistry.registerToStringExtensions
 import scala_exam.models.{RequestConfig, User}
 
-class UserListExtensions(list:List[User]) {
+class UserListReportExtensions(list:List[User]) {
 
-  def filterWrongPhoneAndEmail: List[User]  ={
-    list.filter(u => u.phone.isValidPhone && u.email.isValidEmail)
+  def filterWrongPhone: List[User]  ={
+    list.filter(_.phone.isValidPhone())
+  }
+
+  def filterWrongEmail: List[User] ={
+    list.filter(_.email.isValidEmail())
   }
 
   def filterNegativeAge:List[User]={
