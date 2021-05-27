@@ -8,15 +8,14 @@ import scala_exam.models.Client
 import scala.collection.JavaConverters.asScalaIteratorConverter
 
 @Component
-private[providers] class ClientProvider() {
+private[providers] class ClientProvider(xls:XlsReader) {
 
 
   @Value("${clients_file_path}")
   var value:String = null
 
   def getAllClientsFromFile():List[Client]  ={
-    val sere:XlsReader = new XlsReader()
-    val rowIterator: Iterator[Row] = sere.getXlsFile(value).asScala
+    val rowIterator: Iterator[Row] = xls.getXlsFile(value).asScala
     if(rowIterator.hasNext)
       rowIterator.next()
     rowIterator.map(Client(_)).toList

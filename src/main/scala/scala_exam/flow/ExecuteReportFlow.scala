@@ -1,11 +1,11 @@
-package scala_exam.report_flow
+package scala_exam.flow
 
 import org.springframework.stereotype.Component
 import scala_exam.extensions.user_list_report_extention.UserListRegistry.registerToPersonBaseListExtensions
 import scala_exam.models.{RequestConfig, User}
 
 @Component
-class ExecuteReport {
+class ExecuteReportFlow {
   def generalReport(list:List[User],request: RequestConfig): Unit ={
     println("the size of the list before filtering" + list.size)
     println("Filter all invalid emails and phones numbers: ")

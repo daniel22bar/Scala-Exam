@@ -9,12 +9,14 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.springframework.stereotype.Component;
 
 /**
  * A dirty simple program that reads an Excel file.
  * @author www.codejava.net
  *
  */
+@Component
  class XlsReader {
     @SneakyThrows
     public Iterator<Row> getXlsFile(String excelFilePath) {

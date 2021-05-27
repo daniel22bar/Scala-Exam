@@ -1,4 +1,4 @@
-package scala_exam.report_flow
+package scala_exam.flow
 
 import org.springframework.stereotype.Component
 import scala_exam.adapters.ImplicitMethods._
@@ -6,7 +6,7 @@ import scala_exam.models.{Client, Person, RequestConfig}
 import scala_exam.providers.ContextProvider
 
 @Component
-class ReportsFlowManager(cp:ContextProvider,executeReport: ExecuteReport) {
+class ApplicationFlowManager(cp:ContextProvider, executeReport: ExecuteReportFlow) {
 
   def startReports(): Unit = {
     val clientsList:List[Client] = cp.getProviderByType(Client).asInstanceOf[List[Client]]
