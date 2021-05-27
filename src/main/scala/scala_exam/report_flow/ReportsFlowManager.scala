@@ -3,7 +3,7 @@ package scala_exam.report_flow
 import org.springframework.stereotype.Component
 import scala_exam.PersonBaseSubTypes
 import scala_exam.extensions.client_extenstion.ClientListRegistry.registerToClientListExtension
-import scala_exam.extensions.person_extention.PersoBaseListRegistry.registerToPersonBaseListExtensions
+import scala_exam.extensions.person_base_extention.PersoBaseListRegistry.registerToPersonBaseListExtensions
 import scala_exam.models.{Client, PersonBase, RequestConfig}
 import scala_exam.providers.ContextProvider
 
