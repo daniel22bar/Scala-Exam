@@ -10,6 +10,6 @@ case class RequestConfig(@JsonProperty("min_age")minAge:Int, @JsonProperty("max_
                          , @JsonScalaEnumeration(classOf[GenderWrapper])gender:Gender,
                          @JsonProperty("prefix_name")prefixName:String,
                          @JsonScalaEnumeration(classOf[MaritalStatusWrapper])maritalStatus: MaritalStatus,
-                         @JsonProperty("Number of Children")numberOfChildren:Int)
+                         @JsonProperty("Number of Children")numberOfChildren:Int) extends Serializable
 
 

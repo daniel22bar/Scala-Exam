@@ -3,7 +3,7 @@ package scala_exam.models
 import scala_exam.enums.Gender.Gender
 import scala_exam.enums.MaritalStatus.MaritalStatus
 
-case class User(age:Int, phone:String, email:String, name:String,gender: Gender,numberOfChildren:Option[Int] = null,maritalStatus:Option[MaritalStatus] = null)
+case class User(age:Int, phone:String, email:String, name:String,gender: Gender,numberOfChildren:Option[Int] = None,maritalStatus:Option[MaritalStatus] = None)
 
 object User{
 

@@ -6,5 +6,5 @@ class MaritalStatusWrapper extends TypeReference[MaritalStatus.type]
 
 object MaritalStatus extends Enumeration {
   type MaritalStatus = Value
-  val Married, Single = Value
+  val Married, Single,Undefined = Value
 }
